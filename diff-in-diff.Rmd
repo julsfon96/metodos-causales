@@ -1,0 +1,58 @@
+---
+title: "Métodos causales en R"
+author: "Mario A. Garcia-Meza"
+date: "Universidad Juárez del Estado de Durango"
+output:
+  xaringan::moon_reader:
+    css: [default, metropolis, metropolis-fonts] 
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+name: toc
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(knitr)
+opts_chunk$set(
+  fig.align="center", #fig.width=6, fig.height=4.5, 
+  # out.width="748px", #out.length="520.75px",
+  dpi=300, #fig.path='Figs/',
+  cache=F#, echo=F, warning=F, message=F
+  )
+```
+
+## Table of contents
+
+1. [Introducción](#intro)
+
+2. [El sesgo de selección](#selec)
+
+3. [Aleatoriarizacion](#random)
+
+4. [Regresión](#regression)
+
+5. [Diferencias en Diferencias](#DiD)
+
+6. [Control Sintético](#synth)
+
+---
+class: inverse, center, middle
+name: intro
+
+# Introducción
+
+---
+class: center, middle
+name: selec
+# El sesgo de selección
+Describimos el tratamiento como una variable binaria $D_i = \{0,1\}$ y el resultado de interés lo denotamos con $Y_i$.
+\begin{equation}
+  \mbox{resultado potencial} = 
+  \begin{cases}
+  Y_{1i}, \qquad \mbox{si }D_i = 1 \\
+  Y_{0i}, \qquad \mbox{si }D_i = 0
+  \end{cases}
+\end{equation}
