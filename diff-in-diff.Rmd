@@ -1,0 +1,14 @@
+---
+title: "Métodos Causales en R"
+author: "Mario A. Garcia-Meza"
+date: "30/10/2020"
+output: beamer_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Causalidad
+
+
