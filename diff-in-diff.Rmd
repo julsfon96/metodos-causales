@@ -12,3 +12,19 @@ knitr::opts_chunk$set(echo = FALSE)
 ## Causalidad
 
 
+## Crisis, política monetaria y recuperación
+
+Mississippi quedó dividido entre el distrito 6 y 8 de la Reserva Federal en Estados Unidos.
+
+## El modelo(1)
+
+Necesitamos
+- Una _dummy_ para el distrito de tratamiento. En este caso, se trata del distrito 6 .
+- Una _dummy_ para el periodo posterior al tratamiento.
+- Un término de interacción
+
+## El modelo (2)
+El modelo de regresión de DD para el experimento de Mississippi estima
+\begin{equation}
+  Y_{dt} = \alpha \beta \mbox{TRAT}_d + \gamma \mbox{POST}_t + \delta_{rDD}(\mbox{TRAT}_d \times \mbox{POST}_t) + e_{dt}
+\end{equation}
